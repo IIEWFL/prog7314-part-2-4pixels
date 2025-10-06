@@ -1,4 +1,3 @@
-//igdbService
 const axios = require('axios');
 
 const CLIENT_ID = process.env.TWITCH_CLIENT_ID;

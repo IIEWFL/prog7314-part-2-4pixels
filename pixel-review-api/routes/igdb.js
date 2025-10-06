@@ -3,7 +3,7 @@ const express = require('express');
 const router = express.Router();
 const { getTrendingGames, searchGames, getGameById, fetchFromIGDB } = require('../helpers/igdbhelper');
 
-// IGDB-supported genres-IGDB genre IDs mapping
+// IGDB-supported genres - IGDB genre IDs mapping
 const genreMap = {
     "Pinball": [28],
     "Adventure": [31],

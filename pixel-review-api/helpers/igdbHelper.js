@@ -1,4 +1,3 @@
-//igdbHelper
 const axios = require('axios');
 
 const TWITCH_CLIENT_ID = process.env.TWITCH_CLIENT_ID;
@@ -94,5 +93,5 @@ async function getGameById(id) {
     return data[0];
 }
 
-//Export everything, including fetchFromIGDB
+// Export everything, including fetchFromIGDB
 module.exports = { getIgdbToken, fetchFromIGDB, getTrendingGames, searchGames, getGameById };
