@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base colors -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- BMO Theme Colors -->
+    <color name="bmo_teal">#4ABDAC</color>
+    <color name="bmo_green">#3BB273</color>
+    <color name="bmo_yellow">#F7B32B</color>
+    <color name="bmo_red">#FC4A1A</color>
+    <color name="bmo_light">#E6F7F1</color>
+    <color name="bmo_dark">#1C3A3E</color>
+</resources>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--Reference:
+       Android Developers (n.d.) Toolbar | Android Developers. [online] Available at: https://developer.android.com/reference/androidx/appcompat/widget/Toolbar
+         Android Developers (n.d.) EditText | Android Developers. [online] Available at: https://developer.android.com/reference/android/widget/EditText
+       https://www.geeksforgeeks.org/scrollview-in-android/-->
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bmo_light">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <!-- Search Bar -->
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/searchView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:queryHint="Search games..."
+                android:iconifiedByDefault="false"
+                android:background="@drawable/search_background"/>
+
+            <!-- Trending Banner Carousel -->
+            <LinearLayout
+                android:id="@+id/trendingBannerContainer"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:orientation="vertical"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Trending"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:paddingBottom="4dp"/>
+
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/vpTrendingBanner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </LinearLayout>
+
+            <!-- Filter & Sort Buttons -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp"
+                android:gravity="end">
+
+                <Button
+                    android:id="@+id/btnFilter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Filter"/>
+
+                <Button
+                    android:id="@+id/btnSort"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sort By"
+                    android:layout_marginStart="8dp"/>
+            </LinearLayout>
+
+            <!-- Status Text -->
+            <TextView
+                android:id="@+id/tvSearchStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:visibility="gone"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:layout_marginTop="4dp"/>
+
+            <!-- New Releases Heading -->
+            <TextView
+                android:id="@+id/tvNewReleases"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Releases"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:paddingBottom="4dp"
+                android:layout_marginTop="8dp"/>
+
+            <!-- Games RecyclerView -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvGamesList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                android:paddingTop="8dp"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- Loading Indicator -->
+    <ProgressBar
+        android:id="@+id/progressLoading"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:visibility="gone"/>
+</FrameLayout>

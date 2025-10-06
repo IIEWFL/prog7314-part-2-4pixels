@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--Murphy, M. (2015). Android User Interface Design. Wiley. [https://www.wiley.com/en-us/Android+User+Interface+Design-p-9781118834674]
+Android Dev Docs. (2023). tools:context Attribute. [https://developer.android.com/studio/write/tool-attributes#toolscontext]
+Google. (2023). Material Design Components. [https://material.io/components/buttons/android]-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bmo_light">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Welcome / Intro Section -->
+        <LinearLayout
+            android:id="@+id/layoutWelcome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Welcome to PixelReview!"
+                android:textSize="22sp"
+                android:textColor="@color/bmo_dark"
+                android:paddingBottom="8dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Track your games, get recommendations, and explore upcoming releases."
+                android:textSize="16sp"
+                android:textColor="@color/bmo_dark"
+                android:paddingBottom="16dp"
+                android:textAlignment="center"/>
+
+            <Button
+                android:id="@+id/btnLoginSignup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Log In / Sign Up"
+                android:visibility="gone"/>
+
+            <Button
+                android:id="@+id/btnAddGames"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add Games to Library"
+                android:visibility="gone"/>
+        </LinearLayout>
+
+        <!-- Pie Chart Section -->
+        <TextView
+            android:id="@+id/tvGenreStats"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Played Game Genres:"
+            android:textSize="18sp"
+            android:textColor="@color/bmo_dark"
+            android:paddingBottom="8dp"/>
+
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/pieChartGenres"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:background="@android:color/white"
+            android:padding="8dp"/>
+
+        <!-- Game Recommendations Section -->
+        <TextView
+            android:id="@+id/tvRecommendations"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Recommended for You"
+            android:textSize="18sp"
+            android:textColor="@color/bmo_dark"
+            android:paddingTop="16dp"
+            android:paddingBottom="8dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvRecommendations"
+            android:layout_width="match_parent"
+            android:layout_height="191dp"
+            android:clipToPadding="false"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:scrollbars="horizontal"
+            app:layoutManager="LinearLayoutManager"
+            tools:listitem="@layout/item_game_recommendation" />
+
+        <!-- Upcoming games Section -->
+        <TextView
+            android:id="@+id/tvUpcomingLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Upcoming Games"
+            android:textSize="18sp"
+            android:textColor="@color/bmo_dark"
+            android:paddingTop="16dp"
+            android:paddingBottom="12dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvUpcoming"
+            android:layout_width="match_parent"
+            android:layout_height="191dp"
+            android:clipToPadding="false"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:scrollbars="horizontal"
+            app:layoutManager="LinearLayoutManager"
+            tools:listitem="@layout/item_game_recommendation" />
+
+        <ProgressBar
+            android:id="@+id/progressLoadingHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            style="?android:attr/progressBarStyleLarge" />
+
+    </LinearLayout>
+</ScrollView>

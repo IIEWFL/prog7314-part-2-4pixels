@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bmo_light">
+
+    <!-- Scrollable content -->
+    <ScrollView
+        android:id="@+id/scrollContent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/bottomLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <!-- Game info card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:elevation="6dp"
+                app:cardCornerRadius="12dp"
+                android:background="@color/white">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@color/white"
+                    android:padding="12dp">
+
+                    <ImageView
+                        android:id="@+id/imgGameCover"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:scaleType="centerCrop"
+                        android:background="@drawable/bg_image_rounded"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:paddingStart="12dp">
+
+                        <TextView
+                            android:id="@+id/tvPoweredBy"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Powered by IGDB API"
+                            android:textSize="12sp"
+                            android:textColor="@color/bmo_dark"
+                            android:gravity="left"
+                            android:paddingTop="8dp"/>
+
+                        <TextView
+                            android:id="@+id/tvGameTitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Game Title"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/bmo_dark"
+                            android:maxLines="2"
+                            android:ellipsize="end"/>
+
+                        <!-- Rating layout -->
+                        <LinearLayout
+                            android:id="@+id/layoutRating"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:layout_marginTop="4dp">
+
+                            <RatingBar
+                                android:id="@+id/ratingBarDetail"
+                                style="?android:attr/ratingBarStyleSmall"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:numStars="5"
+                                android:stepSize="0.1"
+                                android:isIndicator="true"
+                                android:progressTint="@color/bmo_yellow"
+                                android:secondaryProgressTint="@color/bmo_yellow" />
+
+                            <TextView
+                                android:id="@+id/tvRatingDetail"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0.0"
+                                android:textColor="@color/bmo_yellow"
+                                android:textSize="14sp"
+                                android:paddingStart="4dp"/>
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tvGameRelease"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Released: 2020"
+                            android:textSize="14sp"
+                            android:textColor="@color/bmo_dark"
+                            android:paddingTop="2dp"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Game summary -->
+            <TextView
+                android:id="@+id/tvGameSummary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Game Summary..."
+                android:textColor="@color/bmo_dark"
+                android:textSize="16sp"
+                android:paddingBottom="12dp"/>
+
+            <!-- Additional info card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="4dp"
+                app:cardCornerRadius="12dp"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/white"
+                    android:padding="12dp">
+
+                    <TextView
+                        android:id="@+id/tvGameGenres"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Genres: "
+                        android:textSize="14sp"
+                        android:textColor="@color/bmo_dark"
+                        android:paddingBottom="4dp"/>
+
+                    <TextView
+                        android:id="@+id/tvGamePlatforms"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Platforms: "
+                        android:textSize="14sp"
+                        android:textColor="@color/bmo_dark"
+                        android:paddingBottom="4dp"/>
+
+                    <TextView
+                        android:id="@+id/tvGameDevelopers"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Developers: "
+                        android:textSize="14sp"
+                        android:textColor="@color/bmo_dark"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Screenshots -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Screenshots"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:paddingBottom="8dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvScreenshots"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:orientation="horizontal"
+                android:clipToPadding="false"
+                android:paddingBottom="12dp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!-- Bottom buttons -->
+    <LinearLayout
+        android:id="@+id/bottomLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/bmo_light"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:weightSum="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/btnAddToLibrary"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:text="Add to Library" />
+
+        <Button
+            android:id="@+id/btnAddToFavourites"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:text="Add to Favourites" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:startDestination="@id/HomeFragment">
+
+    <fragment
+        android:id="@+id/HomeFragment"
+        android:name="com.example.bmo.fragments.HomeFragment"
+        android:label="My Shelf" />
+
+    <fragment
+        android:id="@+id/SearchFragment"
+        android:name="com.example.bmo.fragments.SearchFragment"
+        android:label="Collection" />
+
+    <fragment
+        android:id="@+id/LibraryFragment"
+        android:name="com.example.bmo.fragments.LibraryFragment"
+        android:label="Add a Fragrance" />
+
+    <fragment
+        android:id="@+id/LoginFragment"
+        android:name="com.example.bmo.fragments.LoginFragment"
+        android:label="WishList" />
+
+    <fragment
+        android:id="@+id/RegisterFragment"
+        android:name="com.example.bmo.fragments.RegisterFragment"
+        android:label="Login" />
+</navigation>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp"
+    android:background="@color/bmo_light">
+
+    <!-- Game Thumbnail -->
+    <ImageView
+        android:id="@+id/ivGameThumbnail"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/sample_game_cover"
+        android:scaleType="centerCrop"
+        android:background="@android:color/darker_gray" />
+
+    <!-- Game info container -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingStart="12dp"
+        android:gravity="center_vertical">
+
+        <!-- Game title -->
+        <TextView
+            android:id="@+id/tvGameTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Game Name"
+            android:textColor="@color/bmo_dark"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:maxLines="1"
+            android:ellipsize="end" />
+
+        <!-- Rating layout -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="2dp">
+
+            <RatingBar
+                android:id="@+id/ratingBar"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:numStars="5"
+                android:stepSize="0.1"
+                android:isIndicator="true"
+                android:progressTint="@color/bmo_yellow"
+                android:secondaryProgressTint="@color/bmo_yellow" />
+
+            <TextView
+                android:id="@+id/tvRatingText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4.5"
+                android:textColor="@color/bmo_yellow"
+                android:textSize="14sp"
+                android:paddingStart="4dp" />
+        </LinearLayout>
+
+        <!-- Genre • Platform • Release -->
+        <TextView
+            android:id="@+id/tvGameInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Genre • Platform • Year"
+            android:textColor="@color/bmo_dark"
+            android:textSize="14sp"
+            android:paddingTop="2dp"
+            android:maxLines="1"
+            android:ellipsize="end" />
+    </LinearLayout>
+
+    <!-- Favourite Heart Icon -->
+    <ImageView
+        android:id="@+id/ivFavourite"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_heart_filled"
+        android:contentDescription="Favourite"
+        android:visibility="gone"
+        android:layout_gravity="center_vertical"
+        android:paddingStart="8dp"/>
+</LinearLayout>

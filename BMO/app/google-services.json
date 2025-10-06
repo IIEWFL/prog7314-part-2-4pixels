@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "315353948381",
+    "project_id": "pixelreviewdb",
+    "storage_bucket": "pixelreviewdb.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:315353948381:android:5c3c56b8de9ae3dbdebb34",
+        "android_client_info": {
+          "package_name": "com.example.bmo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "315353948381-9qqgkveiiv2ijfa66tpc3op6povurn16.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAUN4WeXwbkI3oHFtRBj5EYcXBJoiGKpuQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "315353948381-9qqgkveiiv2ijfa66tpc3op6povurn16.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

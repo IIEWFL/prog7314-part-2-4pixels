@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Pixel Review</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="open_drawer">Open navigation drawer</string>
+    <string name="close_drawer">Close navigation drawer</string>
+    <string name="title_activity_game_detail">GameDetailActivity</string>
+
+    <string name="default_web_client_id">315353948381-9qqgkveiiv2ijfa66tpc3op6povurn16.apps.googleusercontent.com</string>
+
+    <string-array name="sort_options">
+        <item>Name</item>
+        <item>Rating</item>
+        <item>Release Date</item>
+    </string-array>
+
+    <string-array name="language_options">
+        <item>English</item>
+        <item>Afrikaans</item>
+    </string-array>
+
+
+</resources>
