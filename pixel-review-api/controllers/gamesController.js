@@ -1,4 +1,8 @@
 // controllers/gamesController.js
+
+/*freeCodeCamp.org. (2025, June 10). MERN Stack Tutorial for Beginners with Deployment – 2025 [Video]. 
+YouTube. https://www.youtube.com/watch?v=F9gB5b4jgOI*/
+
 const cache = require('../utils/cache');
 const { searchGames, getGameById } = require('../helpers/igdhelper');
 

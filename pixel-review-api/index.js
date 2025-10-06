@@ -1,3 +1,12 @@
+/*freeCodeCamp.org. (2025, June 10). MERN Stack Tutorial for Beginners with Deployment – 2025 [Video]. 
+YouTube. https://www.youtube.com/watch?v=F9gB5b4jgOI*/
+
+/*GeekProbin. (2023, August 19). React JS Gaming Website Tutorial With RAWG Video Games API | PART 1 | React For Beginners [Video].
+ YouTube. https://www.youtube.com/watch?v=TuOF8ppiKDY */
+
+/*https://api-docs.igdb.com/#getting-started
+Endpoints, how to retrieve */
+
 const express = require('express');
 const dotenv = require('dotenv');
 const cors = require('cors');

@@ -1,4 +1,7 @@
 //igdbService.cs
+
+/*freeCodeCamp.org. (2025, June 10). MERN Stack Tutorial for Beginners with Deployment – 2025 [Video]. 
+YouTube. https://www.youtube.com/watch?v=F9gB5b4jgOI*/
 const axios = require('axios');
 
 const CLIENT_ID = process.env.TWITCH_CLIENT_ID;
