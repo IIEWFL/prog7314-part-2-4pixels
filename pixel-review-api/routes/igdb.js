@@ -1,7 +1,7 @@
 // igdb.js
 const express = require('express');
 const router = express.Router();
-const { getTrendingGames, searchGames, getGameById, fetchFromIGDB } = require('../helpers/igdbhelper');
+const { getTrendingGames, searchGames, getGameById, fetchFromIGDB } = require('../helpers/igdhelper');
 
 // IGDB-supported genres - IGDB genre IDs mapping
 const genreMap = {

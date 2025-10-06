@@ -1,6 +1,6 @@
 // controllers/gamesController.js
 const cache = require('../utils/cache');
-const { searchGames, getGameById } = require('../helpers/igdbhelper');
+const { searchGames, getGameById } = require('../helpers/igdhelper');
 
 // ---------- Trending Games ----------
 exports.getTrendingGames = async (req, res) => {
